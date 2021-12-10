@@ -11,8 +11,8 @@ function userValidation(formName) {
                 alert("La dirección de email es incorrecta.");
             } else {
                 $.ajax({
-                    url: "http://localhost:8080/api/user/" + email + "/" + password + "",
-                    //url: "http://150.230.86.149:80/api/user/" + email + "/" + password + "",
+                    //url: "http://localhost:8080/api/user/" + email + "/" + password + "",
+                    url: "http://152.70.209.140:8080/api/user/" + email + "/" + password + "",
                     type: "GET",
                     datatype: "JSON",
                     success: function (item) {
@@ -45,8 +45,8 @@ function userValidationAdmin(formName) {
                 alert("La dirección de email es incorrecta.");
             } else {
                 $.ajax({
-                    url: "http://localhost:8080/api/user/" + email + "/" + password + "",
-                    //url: "http://150.230.86.149:80/api/user/" + email + "/" + password + "",
+                    //url: "http://localhost:8080/api/user/" + email + "/" + password + "",
+                    url: "http://152.70.209.140:8080/api/user/" + email + "/" + password + "",
                     type: "GET",
                     datatype: "JSON",
                     success: function (item) {
@@ -164,8 +164,8 @@ function createUser() {
                     clearFields(formName);
                 } else {
                     $.ajax({
-                        url: "http://localhost:8080/api/user/all",
-                        //url: "http://150.230.86.149:80/api/user/all",
+                        //url: "http://localhost:8080/api/user/all",
+                        url: "http://152.70.209.140:8080/api/user/all",
                         async: false,
                         type: "GET",
                         datatype: "JSON",
@@ -188,8 +188,8 @@ function createUser() {
                             };
                             let dataToSend = JSON.stringify(myData);
                             $.ajax({
-                                url: "http://localhost:8080/api/user/new",
-                                //url: "http://150.230.86.149:80/api/user/new",
+                                //url: "http://localhost:8080/api/user/new",
+                                url: "http://152.70.209.140:8080/api/user/new",
                                 type: "POST",
                                 data: dataToSend,
                                 contentType: "application/json; charset=utf-8",
@@ -235,8 +235,8 @@ function createProduct() {
         };
         let dataToSend = JSON.stringify(myData);
         $.ajax({
-            url: "http://localhost:8080/api/clothe/new",
-            //url: "http://150.230.86.149:80/api/clothe/new",
+            //url: "http://localhost:8080/api/clothe/new",
+            url: "http://152.70.209.140:8080/api/clothe/new",
             type: "POST",
             data: dataToSend,
             contentType: "application/json; charset=utf-8",
@@ -255,8 +255,8 @@ function createProduct() {
 function emailVerification(email) {
     let emailExits = false;
     $.ajax({
-        url: "http://localhost:8080/api/user/emailexist/" + email + "",
-        //url: "http://150.230.86.149:80/api/user/emailexist/" + email + "",
+        //url: "http://localhost:8080/api/user/emailexist/" + email + "",
+        url: "http://152.70.209.140:8080/api/user/emailexist/" + email + "",
         async: false,
         type: "GET",
         datatype: "JSON",
@@ -274,8 +274,8 @@ function showData(formName) {
     if (formName == "usersAdmon") {
         $('#usersAdmonResult').empty();
         $.ajax({
-            url: "http://localhost:8080/api/user/all",
-            //url: "http://150.230.86.149:80/api/user/all",
+            //url: "http://localhost:8080/api/user/all",
+            url: "http://152.70.209.140:8080/api/user/all",
             async: false,
             type: "GET",
             datatype: "JSON",
@@ -287,8 +287,8 @@ function showData(formName) {
     } else if (formName == "productsAdmon") {
         $('#productsAdmonResult').empty();
         $.ajax({
-            url: "http://localhost:8080/api/clothe/all",
-            //url: "http://150.230.86.149:80/api/clothe/all",
+            //url: "http://localhost:8080/api/clothe/all",
+            url: "http://152.70.209.140:8080/api/clothe/all",
             type: "GET",
             datatype: "JSON",
             success: function (answer) {
@@ -381,8 +381,8 @@ function dataCharge(formName, idElement) {
     if (formName == "usersAdmon") {
         //console.log("llego al data charge");
         $.ajax({
-            url: "http://localhost:8080/api/user/" + idElement + "",
-            //url: "http://150.230.86.149:80/api/user/"+ idElement +"",
+            //url: "http://localhost:8080/api/user/" + idElement + "",
+            url: "http://152.70.209.140:8080/api/user/"+ idElement +"",
             type: "GET",
             datatype: "JSON",
             success: function (answer) {
@@ -402,8 +402,8 @@ function dataCharge(formName, idElement) {
     } else if (formName == "productsAdmon") {
         console.log("llego al data charge");
         $.ajax({
-            url: "http://localhost:8080/api/clothe/" + idElement + "",
-            //url: "http://150.230.86.149:80/api/clothe/"+ idElement +"",
+            //url: "http://localhost:8080/api/clothe/" + idElement + "",
+            url: "http://152.70.209.140:8080/api/clothe/"+ idElement +"",
             type: "GET",
             datatype: "JSON",
             success: function (answer) {
@@ -441,8 +441,8 @@ function editData(formName) {
         };
         let dataToSend = JSON.stringify(myData);
         $.ajax({
-            url: "http://localhost:8080/api/user/update",
-            //url: "http://150.230.86.149:80/api/user/update",
+            //url: "http://localhost:8080/api/user/update",
+            url: "http://152.70.209.140:8080/api/user/update",
             type: "PUT",
             data: dataToSend,
             contentType: "application/json; charset=utf-8",
@@ -466,8 +466,8 @@ function editData(formName) {
         };
         let dataToSend = JSON.stringify(myData);
         $.ajax({
-            url: "http://localhost:8080/api/clothe/update",
-            //url: "http://150.230.86.149:80/api/clothe/update",
+            //url: "http://localhost:8080/api/clothe/update",
+            url: "http://152.70.209.140:8080/api/clothe/update",
             type: "PUT",
             data: dataToSend,
             contentType: "application/json; charset=utf-8",
@@ -489,8 +489,8 @@ function deleteData(formName, idElement) {
         let id = idElement;
         let dataToSend = JSON.stringify(myData);
         $.ajax({
-            url: "http://localhost:8080/api/user/" + id + "",
-            //url: "http://150.230.86.149:80/api/user/" + id +"",
+            //url: "http://localhost:8080/api/user/" + id + "",
+            url: "http://152.70.209.140:8080/api/user/" + id +"",
             type: "DELETE",
             data: dataToSend,
             contentType: "application/json; charset=utf-8",
@@ -507,8 +507,8 @@ function deleteData(formName, idElement) {
         let reference = idElement;
         let dataToSend = JSON.stringify(myData);
         $.ajax({
-            url: "http://localhost:8080/api/clothe/" + reference + "",
-            //url: "http://150.230.86.149:80/api/clothe/" + reference +"",
+            //url: "http://localhost:8080/api/clothe/" + reference + "",
+            url: "http://152.70.209.140:8080/api/clothe/" + reference +"",
             type: "DELETE",
             data: dataToSend,
             contentType: "application/json; charset=utf-8",
