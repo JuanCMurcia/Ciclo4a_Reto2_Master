@@ -25,7 +25,7 @@ public class Reto2MasterApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         userInterface.deleteAll();
-        clotheInterface.deleteAll();//Iniciar tabla en ceros
+        clotheInterface.deleteAll();
     }
 
 }

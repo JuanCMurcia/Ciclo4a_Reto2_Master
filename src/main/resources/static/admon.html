@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="fav/favicon.ico" type="image/x-icon">
-    <title>Bienvenidos</title>
+    <title>Turmeque: Admin</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
@@ -18,6 +18,9 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="js/name.js"></script>
+    <link rel="stylesheet" href="css/admon.css">
 </head>
 
 <body>
@@ -35,53 +38,25 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
                 </ul>
                 <span class="navbar-text">
-                    <a href="./login.html"><button type="button" class="btn btn-success">Login</button></a>
+                    <span class="nombreUsuario">Aqui va el nombre de usuario</span>
+                    <a href="./usersAdmon.html"><button type="button" class="btn btn-success" onclick="usersAdmon()">Administrar Usuarios</button></a>
+                    <a href="./productsAdmon.html"><button type="button" class="btn btn-success" onclick="productsAdmon()">Administrar Productos</button></a>
                 </span>
             </div>
         </nav>
     </div>
     <!-- fin mi navegacion -->
+    
 
-    <!-- mi cabecera -->
-    <div class="miHeader">
-        <div class="jumbotron jumbotron-fluid text-center">
-            <div class="container">
-                <h1 class="display-4">Bienvendidos</h1>
-                <p class="lead">Ropa para Niños y Niñas</p>
-            </div>
-        </div>
-    </div>
-    <!-- fin mi cabecera -->
-
-    <!-- inicio cuerpo -->
-    <div class="miBody">
-        <div class="container text-center">
-            <img src="images/index.jpg" alt="">
-        </div>
-
-
-    </div>
-    <!-- fin inicio cuerpo -->
-
-    <!-- mi Footer -->
-    <div class="miFooter">
-        <!-- Footer -->
-        <footer class="page-footer font-small special-color-dark pt-4">
-
-            <!-- Copyright -->
-            <div class="footer-copyright text-center py-3">© 2021 Copyright:
-                <a href="./index.html"> deAltoTurmeque.com</a>
-            </div>
-            <!-- Copyright -->
-
-        </footer>
-        <!-- Footer -->
-    </div>
-    <!-- fin mi Footer -->
-
-
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>
